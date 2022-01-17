@@ -1,0 +1,12 @@
+<div class="container">
+    <h1 class="header center orange-text">{{ header }}</h1>
+    <h4 class="center light-blue-text">{{ sub_header }}</h4>
+
+
+    <p>Here are our Repositories, {{ username }}</p>
+    <ul class="collection with-header">
+        {% for galaxy in galaxies %}
+            <li class="collection-item"><a href="{{ url_for('repos', repo=galaxy) }}">{{ galaxy }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

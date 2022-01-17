@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Branches in our {{ repo }}</p>
+  <ul class="collection with-header">
+        {% for branch in branches %}
+            <li class="collection-item">{{ branch }}</li>
+        {% endfor %}
+    </ul>
+  <div>
+  <h3>Create a branch</h3>
+  <li><a href="{{ url_for('create_branch', branch=repo) }}">Create</a></li>
+  </div>
+</body>
+</html>
